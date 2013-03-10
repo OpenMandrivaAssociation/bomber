@@ -1,12 +1,12 @@
+Summary:	Arcade bombing game
 Name:		bomber
+Epoch:		1
 Version:	4.10.1
 Release:	1
-Epoch:		1
-Summary:	Arcade bombing game
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 Url:		http://www.kde.org/applications/games/bomber/
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 
 %description
