@@ -1,7 +1,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	4.12.4
+Version:	4.13.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -38,6 +38,9 @@ the height of the buildings.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.2-1
+- New version 4.13.2
+
 * Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.4-1
 - New version 4.12.4
 
