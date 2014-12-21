@@ -2,7 +2,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	14.11.97
+Version:	14.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
