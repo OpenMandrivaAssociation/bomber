@@ -2,7 +2,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	14.12.3
+Version:	15.03.97
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -19,13 +19,14 @@ level. Each level gets a bit harder by increasing the speed of the plane and
 the height of the buildings.
 
 %files
-%{_kde_bindir}/bomber
-%{_kde_applicationsdir}/bomber.desktop
-%{_kde_appsdir}/bomber
-%{_kde_datadir}/config.kcfg/bomber.kcfg
-%{_kde_docdir}/HTML/en/bomber
-%{_kde_iconsdir}/hicolor/*/apps/bomber.*
-%{_datadir}/apps/appdata/bomber.appdata.xml
+%{_bindir}/bomber
+%{_datadir}/applications/org.kde.bomber.desktop
+%{_datadir}/bomber
+%{_datadir}/config.kcfg/bomber.kcfg
+%{_datadir}/icons/hicolor/*/apps/bomber.*
+%{_datadir}/appdata/bomber.appdata.xml
+%{_datadir}/kxmlgui5/bomber
+%doc %{_docdir}/HTML/en/bomber
 
 #------------------------------------------------------------------------------
 
