@@ -9,6 +9,8 @@ License:	GPLv2 and LGPLv2 and GFDL
 Url:		http://www.kde.org/applications/games/bomber/
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
+BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 
 %description
 Bomber is a single player arcade game.
@@ -34,7 +36,7 @@ the height of the buildings.
 %setup -q
 
 %build
-%cmake_kde4
+%cmake_kde5
 %make
 
 %install
