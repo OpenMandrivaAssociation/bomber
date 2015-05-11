@@ -7,7 +7,7 @@ Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 Url:		http://www.kde.org/applications/games/bomber/
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
 BuildRequires:	ninja
@@ -37,7 +37,7 @@ the height of the buildings.
 
 %build
 %cmake_kde5
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
