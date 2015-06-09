@@ -10,7 +10,6 @@ Url:		http://www.kde.org/applications/games/bomber/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
-BuildRequires:	ninja
 
 %description
 Bomber is a single player arcade game.
@@ -34,9 +33,9 @@ the height of the buildings.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
 %ninja -C build
 
 %install
