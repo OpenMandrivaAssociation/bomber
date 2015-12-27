@@ -16,6 +16,7 @@ BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5DBusAddons)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	pkgconfig(phonon4qt5)
 BuildRequires:	pkgconfig(Qt5Widgets)
 
 %description
