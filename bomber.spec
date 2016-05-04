@@ -9,6 +9,7 @@ License:	GPLv2 and LGPLv2 and GFDL
 Url:		http://www.kde.org/applications/games/bomber/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(KF5KDEGames)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5CoreAddons)
@@ -18,6 +19,8 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	pkgconfig(phonon4qt5)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Qml)
+BuildRequires:	pkgconfig(Qt5Quick)
 
 %description
 Bomber is a single player arcade game.
