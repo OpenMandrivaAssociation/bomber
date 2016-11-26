@@ -36,7 +36,7 @@ the height of the buildings.
 %{_datadir}/bomber
 %{_datadir}/config.kcfg/bomber.kcfg
 %{_datadir}/icons/hicolor/*/apps/bomber.*
-%{_datadir}/appdata/org.kde.bomber.appdata.xml
+%{_datadir}/metainfo/org.kde.bomber.appdata.xml
 %{_datadir}/kxmlgui5/bomber
 %doc %{_docdir}/HTML/en/bomber
 
