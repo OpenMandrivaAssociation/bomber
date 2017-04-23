@@ -2,7 +2,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -30,7 +30,7 @@ The goal of the game is to destroy all the buildings and advance to the next
 level. Each level gets a bit harder by increasing the speed of the plane and
 the height of the buildings.
 
-%files
+%files -f %{name}.lang
 %{_bindir}/bomber
 %{_datadir}/applications/org.kde.bomber.desktop
 %{_datadir}/bomber
@@ -38,7 +38,6 @@ the height of the buildings.
 %{_datadir}/icons/hicolor/*/apps/bomber.*
 %{_datadir}/metainfo/org.kde.bomber.appdata.xml
 %{_datadir}/kxmlgui5/bomber
-%doc %{_docdir}/HTML/en/bomber
 
 #------------------------------------------------------------------------------
 
@@ -51,3 +50,4 @@ the height of the buildings.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
