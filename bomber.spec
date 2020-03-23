@@ -2,7 +2,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
