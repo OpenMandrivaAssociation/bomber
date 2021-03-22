@@ -2,7 +2,7 @@
 Summary:	Arcade bombing game
 Name:		bomber
 Epoch:		1
-Version:	20.12.3
+Version:	21.03.80
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -37,7 +37,6 @@ the height of the buildings.
 %{_datadir}/config.kcfg/bomber.kcfg
 %{_datadir}/icons/hicolor/*/apps/bomber.*
 %{_datadir}/metainfo/org.kde.bomber.appdata.xml
-%{_datadir}/kxmlgui5/bomber
 
 #------------------------------------------------------------------------------
 
