@@ -1,7 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Arcade bombing game
 Name:		plasma6-bomber
-Epoch:		1
 Version:	24.01.85
 Release:	1
 Group:		Graphical desktop/KDE
@@ -10,7 +9,7 @@ Url:		http://www.kde.org/applications/games/bomber/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/bomber-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Crash)
-BuildRequires:	cmake(KF6KDEGames)
+BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Config)
@@ -30,7 +29,7 @@ The goal of the game is to destroy all the buildings and advance to the next
 level. Each level gets a bit harder by increasing the speed of the plane and
 the height of the buildings.
 
-%files -f %{name}.lang
+%files -f bomber.lang
 %{_bindir}/bomber
 %{_datadir}/applications/org.kde.bomber.desktop
 %{_datadir}/bomber
@@ -41,7 +40,7 @@ the height of the buildings.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n bomber-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -51,4 +50,4 @@ the height of the buildings.
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang bomber --with-html
