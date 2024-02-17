@@ -1,12 +1,19 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Arcade bombing game
 Name:		plasma6-bomber
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 Url:		http://www.kde.org/applications/games/bomber/
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/bomber/-/archive/%{gitbranch}/bomber-%{gitbranchd}.tar.bz2#/bomber-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/bomber-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KDEGames6)
@@ -40,7 +47,7 @@ the height of the buildings.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n bomber-%{version}
+%autosetup -p1 -n bomber-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
