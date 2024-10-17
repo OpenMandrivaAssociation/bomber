@@ -8,7 +8,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
-Url:		http://www.kde.org/applications/games/bomber/
+Url:		https://www.kde.org/applications/games/bomber/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/games/bomber/-/archive/%{gitbranch}/bomber-%{gitbranchd}.tar.bz2#/bomber-%{git}.tar.bz2
 %else
