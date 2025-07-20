@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Arcade bombing game
 Name:		bomber
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -28,6 +28,11 @@ BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:	pkgconfig(Qt6Qml)
 BuildRequires:	pkgconfig(Qt6Quick)
 
+%rename plasma6-bomber
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Bomber is a single player arcade game.
 
@@ -43,18 +48,3 @@ the height of the buildings.
 %{_datadir}/config.kcfg/bomber.kcfg
 %{_datadir}/icons/hicolor/*/apps/bomber.*
 %{_datadir}/metainfo/org.kde.bomber.appdata.xml
-
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n bomber-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang bomber --with-html
